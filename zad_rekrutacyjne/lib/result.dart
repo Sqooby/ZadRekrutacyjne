@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Result extends StatelessWidget {
   final int diffNumber;
 
-  Result(this.diffNumber);
+  const Result(this.diffNumber, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class Result extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          ' liczba: ${diffNumber ?? "brak"}',
+          ' liczba: $diffNumber',
           style: const TextStyle(fontSize: 24),
         ),
       ),

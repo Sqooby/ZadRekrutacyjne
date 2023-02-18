@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 import 'package:zad_rekrutacyjne/result.dart';
 
 void main() {
@@ -37,13 +37,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Zadanie"),
+        title: const Text("Zadanie"),
       ),
       body: Column(
         children: [
           Center(
             child: TextField(
-              decoration: InputDecoration(labelText: "Podaj liczby"),
+              decoration: const InputDecoration(labelText: "Podaj liczby"),
               keyboardType: TextInputType.number,
               controller: _controller,
             ),
@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => Result(oddNumber)),
                 );
               },
-              child: Text('Znajdź liczbe'))
+              child: const Text('Znajdź liczbe'))
         ],
       ),
     );
