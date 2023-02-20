@@ -9,7 +9,7 @@ class Result extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Drugi fragment"),
+        title: const Text("WYnik"),
       ),
       body: Center(
         child: Text(
