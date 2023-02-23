@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'generated/l10n.dart';
+
 class Result extends StatelessWidget {
   final int diffNumber;
 
@@ -9,11 +11,11 @@ class Result extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("WYnik"),
+        title: Text(S.of(context).result),
       ),
       body: Center(
         child: Text(
-          ' liczba: $diffNumber',
+          S.of(context).number + ' $diffNumber',
           style: const TextStyle(fontSize: 24),
         ),
       ),

@@ -1,0 +1,8 @@
+{
+    "@@locale": "en",
+    "title": "Task",
+    "task": "Enter the numbers",
+    "find": "Find number",
+    "result": "Result",
+    "number": "number"
+}

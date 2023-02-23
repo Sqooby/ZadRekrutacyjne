@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:zad_rekrutacyjne/result.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'generated/l10n.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +15,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: Locale('en'),
+      localizationsDelegates: const [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -37,13 +47,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Zadanie"),
+        title: Text(S.of(context).title),
       ),
       body: Column(
         children: [
           Center(
             child: TextField(
-              decoration: const InputDecoration(labelText: "Podaj liczby"),
+              decoration: InputDecoration(labelText: S.of(context).task),
               keyboardType: TextInputType.number,
               controller: _controller,
             ),
@@ -59,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => Result(oddNumber)),
                 );
               },
-              child: const Text('Znajdź liczbe'))
+              child: Text(S.of(context).find))
         ],
       ),
     );
